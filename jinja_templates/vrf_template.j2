@@ -1,0 +1,8 @@
+vrf definition {{ vars['vrf'] }}
+ rd {{ vars['rd'] }}
+ route-target export {{ vars['rt'] }}
+ route-target import {{ vars['rt'] }}
+ !
+ address-family ipv4
+ exit-address-family
+ 

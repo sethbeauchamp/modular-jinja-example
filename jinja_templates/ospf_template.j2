@@ -1,0 +1,7 @@
+router ospf 100 vrf {{ vars['vrf'] }}
+ network 75.76.77.1 0.0.0.3 area 0
+ redistribute bgp 100 subnets
+
+router bgp 100
+ address-family ipv4 vrf {{ vars['vrf'] }}
+  redistribute ospf 108

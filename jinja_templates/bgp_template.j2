@@ -1,0 +1,6 @@
+router bgp 100
+ !
+ address-family ipv4 vrf {{ vars['vrf'] }}
+  neighbor 75.76.77.2 remote-as 65500
+  neighbor 75.76.77.2 maximum-prefix 500
+ exit-address-family

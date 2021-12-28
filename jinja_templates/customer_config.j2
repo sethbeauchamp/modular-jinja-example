@@ -1,0 +1,14 @@
+{% include 'vrf_template.j2' %}
+
+
+{% include 'interface_template.j2' %}
+
+
+{%- if 'bgp' in vars['customer_type'] %}
+{% include 'bgp_template.j2'  %}
+{%- endif %}
+
+
+{%- if 'ospf' in vars['customer_type'] %}
+{% include 'ospf_template.j2' %}
+{%- endif %}
